@@ -1,0 +1,29 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Terminal=true
+Exec=
+@echo off
+echo
+echo
+echo
+echo Checkra1n Installer Script by Exyen.
+echo
+echo
+echo Installing Checkra1n...
+echo
+echo "deb https://assets.checkra.in/debian /" | sudo tee -a /etc/apt/sources.list
+sudo apt-key adv --fetch-keys https://assets.checkra.in/debian/archive.key
+sudo apt update
+wget -P /home/$USER/Downloads "https://assets.checkra.in/downloads/linux/cli/x86_64/eda98d55f500a9de75aee4e7179231ed828ac2f5c7f99c87442936d5af4514a4/checkra1n"
+cd ~
+cd Downloads
+echo
+echo Running Checkra1n
+echo
+sudo chmod +x checkra1n
+sudo ./checkra1n
+cd ~
+Name=installjb
+Icon= 
+
